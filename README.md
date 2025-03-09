@@ -1,6 +1,6 @@
-# **Deployment Tool**
+# **DeploymentV2**
 
-This repository provides a setup to help you deploy and manage the **Deployment Tool** application. The `install.sh` script will automate the process of cloning the repository, setting up the virtual environment, installing dependencies, and running the application.
+This repository provides a setup to help you deploy and manage the **Deployment** application. The `install.sh` script will automate the process of cloning the repository, setting up the virtual environment, installing dependencies, and running the application.
 
 ## Installation
 
