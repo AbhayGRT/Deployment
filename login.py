@@ -41,3 +41,5 @@ def update_json_file():
     
     
 update_json_file()
+print("Press ALT+A to run the application")
+print("Press ALT+W to open WAF folder in terminal")
