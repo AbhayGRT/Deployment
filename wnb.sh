@@ -5,7 +5,7 @@ RUN_SCRIPT_PATH="$(realpath waf.sh)"
 
 # Ensure the script exists
 if [ ! -f "$RUN_SCRIPT_PATH" ]; then
-    echo "❌ Error: Script $RUN_SCRIPT_PATH not found!"
+    echo "Error: Script $RUN_SCRIPT_PATH not found!"
     exit 1
 fi
 
@@ -40,4 +40,4 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$CU
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$CUSTOM_PATH command "$RUN_SCRIPT_PATH"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$CUSTOM_PATH binding "<Alt>W"
 
-echo "✅ Shortcut Alt + W assigned to $RUN_SCRIPT_PATH without affecting previous shortcuts!"
+echo "Shortcut Alt + W assigned to $RUN_SCRIPT_PATH without affecting previous shortcuts!"
