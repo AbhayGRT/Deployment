@@ -1,8 +1,8 @@
-# Project Name: **Deployment Tool**
+# **Deployment Tool**
 
 This repository provides a setup to help you deploy and manage the **Deployment Tool** application. The `install.sh` script will automate the process of cloning the repository, setting up the virtual environment, installing dependencies, and running the application.
 
-## Installation Instructions
+## Installation
 
 To install and run the application, follow these simple steps:
 
