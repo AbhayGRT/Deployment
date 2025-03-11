@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "name": "Abhay",
+            "waf_folder_path": "/home/abhay/Documents/wm-si-wafjs3.0",
+            "build_folder_path": "/home/abhay/Music/upload",
+            "backup_folder_path": "/home/abhay/Music/backup",
+            "custom_video": "https://www.youtube.com/watch?v=ljk0tNcAeVo&pp=ygURaWxpYSB0b3B1cmlhIHNvbmc%3D"
+        }
+    ],
+    "media_handle": false
+}

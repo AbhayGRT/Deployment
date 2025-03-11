@@ -1,5 +1,5 @@
 import streamlit as st
-from main import getMakhachev, getDeveloper, getBranch, getBranchName, showITag,loadCSS
+from main import *
 from server import handle_server_side
 from client import handle_client_side
 from media import handle_media
@@ -7,6 +7,9 @@ from media import handle_media
 st.set_page_config(page_title="Deployment", layout="wide")
 
 loadCSS("style.css")
+
+if not check_user_setup():
+    st.switch_page("pages/login.py")
 
 makhachev = getMakhachev()
 clients = makhachev.get("clients", [])
@@ -51,8 +54,6 @@ with st.sidebar:
         deploymentType = "Server Side" if deploymentTypeToggle else "Client Side"
     else:
         deploymentType = "Client Side"
-
-    showITag(developer["users"][0])
 
 
 if deploymentType == "Server Side" and (getBranchData or customBranch):

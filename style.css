@@ -1,30 +1,13 @@
 .st-emotion-cache-1wbqy5l {
-    display: none;
+  display: none;
 }
-
-.st-af {
-    font-size: 1.1rem;
-}
-
-.st-emotion-cache-1espb9k{
-    font-size: 1.1rem;
-}
-.st-emotion-cache-1qrd9al{
-    font-size: 1.1rem;
-}
-
-.st-emotion-cache-1vsah7k{
-    font-size: 1.1rem;
-}
-
-.st-emotion-cache-ah6jdd{
-    font-size: 1.1rem;
-}
-
 .row-widget.stCheckbox span {
-    display: none !important;
+  display: none !important;
 }
 
-[data-testid="stImage"] img{
-    height: 50%;
+[data-testid="stImage"] img {
+  height: 50%;
+}
+[data-testid="stSidebarNav"] {
+  display: none !important;
 }

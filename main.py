@@ -61,12 +61,24 @@ def initialize_json():
                 json.dump(data, file, indent=4)
                 file.truncate()
 
-def showITag(users):
-    """Displays user folder paths when the button is clicked."""
-    if st.checkbox("ⓘ"):
-        st.write("User Folder Paths:", users)
-
 def loadCSS(file_name):
     with open(file_name) as f:
         css = f.read()
         st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+        
+
+def load_json_file(file_path):
+    """Load JSON data from a file if it exists, otherwise return an empty dictionary."""
+    if os.path.exists(file_path):
+        with open(file_path, "r") as file:
+            content = file.read().strip()
+            if content:
+                return json.loads(content)
+    return {}
+
+
+def check_user_setup():
+    data = load_json_file("data.json")
+    if "users" in data and data["users"]:
+        return True
+    return False
