@@ -15,7 +15,7 @@ To install and run the application, follow these simple steps:
    ```bash
    curl -sSL https://raw.githubusercontent.com/AbhayGRT/INSTALLATION-SH/main/install.sh | bash
    ```
-4. ***Running***
+4. ***Running***: 
    After running press Alt+A to open streamlit application.
    After filling the details, it will take you to the homepage.
    
