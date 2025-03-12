@@ -7,7 +7,7 @@ This repository provides a setup to help you deploy and manage the **Deployment*
 To install and run the application, follow these simple steps:
 
 1. **Open Terminal**:
-   Open a terminal on your machine.
+   Open a terminal on your linux machine.
 
 2. **Run the Installation Script**:
    Run the following command to execute the installation script:
