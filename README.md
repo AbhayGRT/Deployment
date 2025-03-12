@@ -26,3 +26,14 @@ To install and run the application, follow these simple steps:
    
 6. ***Extra:***
    On pressing Alt+W it will open terminal to the WAF folder path
+
+
+If somehow it didn't run, then follow this commands
+
+```bash
+cd ~/Deployment
+source deployment/bin/activate
+streamlit run streamlit.py
+
+```
+This is only for one time, after that Alt+A will work as expected
