@@ -73,7 +73,7 @@ def handle_client_side(s3Path, client, environment, ticket, developer):
         "1": {"label": "Backup Command", "command": backup_command, "lang": "bash"},
         "2": {"label": "Dry Run Command", "command": f"{upload_command} --dryrun", "lang": "bash"},
         "3": {"label": "Upload Command", "command": upload_command, "lang": "bash"},
-        "4": {"label": "Check Command", "command": f"aws s3 ls {s3Path} --profile sportz", "lang": "bash"},
+        "4": {"label": "Check Command", "command": f"aws s3 ls {s3Path.rstrip('/')}/ --profile sportz", "lang": "bash"},
     }
 
     for key, cmd in st.session_state["output"].items():
