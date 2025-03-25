@@ -69,11 +69,16 @@ def handle_client_side(s3Path, client, environment, ticket, developer):
     backup_command = f"aws s3 cp {s3Path} {backup_path} --recursive --profile sportz --exclude \"*\" {includes}"
     upload_command = f"aws s3 cp {upload_folder} {s3Path} --recursive --profile sportz"
 
+    grep_pattern = ""
+    if selected_files:
+        escaped_files = [re.escape(file) + "$" for file in selected_files]
+        grep_pattern = f" | grep -E '{'|'.join(escaped_files)}'"
+        
     st.session_state["output"] = {
         "1": {"label": "Backup Command", "command": backup_command, "lang": "bash"},
         "2": {"label": "Dry Run Command", "command": f"{upload_command} --dryrun", "lang": "bash"},
         "3": {"label": "Upload Command", "command": upload_command, "lang": "bash"},
-        "4": {"label": "Check Command", "command": f"aws s3 ls {s3Path.rstrip('/')}/ --profile sportz", "lang": "bash"},
+        "4": {"label": "Check Command", "command": f"aws s3 ls {s3Path.rstrip('/')}/ --profile sportz {grep_pattern}", "lang": "bash"},
     }
 
     for key, cmd in st.session_state["output"].items():
